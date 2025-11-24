@@ -1,8 +1,11 @@
-# Portfólio Acadêmico — Gustavo Felipe Morais
+# 📘 Portfólio Acadêmico — Gustavo Felipe Morais
 
-Projeto em **Node.js + Express + EJS** com **CRUD** (GET/POST/PUT/DELETE) para cumprir os requisitos da Atividade Avaliativa.
+Aplicação desenvolvida com **Node.js**, **Express** e **EJS**, integrada a um banco de dados **MySQL**.  
+O objetivo do projeto é apresentar minha trajetória acadêmica e permitir o gerenciamento de projetos através de operações **CRUD** (Create, Read, Update, Delete).
 
-## Como rodar
+---
+
+## 🚀 Como executar o projeto
 
 ```bash
 npm install
@@ -10,19 +13,56 @@ npm start
 # abra http://localhost:3000
 ```
 
-## Rotas principais
+Certifique-se de configurar o arquivo **.env** com os dados do seu banco MySQL antes de iniciar.
 
-- `/` — Apresentação
-- `/formacao` — Formação e cursos
-- `/projetos` — Lista + CRUD de projetos (com endpoints REST)
-- `/competencias` — Competências técnicas e interpessoais
-- `/contato` — Links
+---
 
-### CRUD de Projetos (também via API)
+## 📌 Funcionalidades e Rotas
 
-- `GET /api/projetos` — lista JSON
-- `POST /projetos` — cria (formulário na página)
-- `PUT /projetos/:id` — edita (usa `?_method=PUT`)
-- `DELETE /projetos/:id` — exclui (usa `?_method=DELETE`)
+### 🔹 Páginas principais
 
-> Os dados dos projetos estão **em memória** (array). Ao reiniciar o servidor, volta ao estado inicial.
+| **Rota**        | **Descrição**                                   |
+|-----------------|-------------------------------------------------|
+| `/`             | Página inicial com apresentação pessoal         |
+| `/formacao`     | Formação acadêmica e cursos                     |
+| `/projetos`     | Lista de projetos + formulário de criação       |
+| `/competencias` | Competências técnicas e interpessoais           |
+| `/contato`      | Links e informações de contato                  |
+
+---
+
+## 🛠️ CRUD de Projetos
+
+Além da interface web, o módulo de projetos possui endpoints REST.
+
+### **Endpoints disponíveis**
+
+- **GET** `/api/projetos` — retorna todos os projetos em formato JSON  
+- **POST** `/projetos` — cria um novo projeto (via formulário)  
+- **PUT** `/projetos/:id` — atualiza um projeto existente (`?_method=PUT`)  
+- **DELETE** `/projetos/:id` — remove um projeto (`?_method=DELETE`)  
+
+> Os cadastros utilizam **MySQL** como armazenamento.  
+> Caso o banco seja recriado, utilize o arquivo **banco.sql** para restaurar a estrutura inicial.
+
+---
+
+## 🧰 Tecnologias utilizadas
+
+- **Node.js**
+- **Express**
+- **EJS**
+- **MySQL**
+- **Bootstrap / CSS**
+- **Method-Override**
+
+---
+
+## 📄 Sobre o projeto
+
+Este portfólio foi desenvolvido como atividade acadêmica, servindo tanto como apresentação pessoal quanto como demonstração prática de:
+
+- Rotas e controllers  
+- Templates EJS  
+- CRUD completo  
+- Integração com MySQL  
