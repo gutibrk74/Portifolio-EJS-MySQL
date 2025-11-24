@@ -89,6 +89,9 @@ public/img/temp/
 *.sqlite3
 *.db
 
+# EXCEÇÃO → Permitir subir esse arquivo específico
+!banco.sql
+
 # ============================
 # Arquivos de Deploy / Produção
 # ============================
