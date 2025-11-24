@@ -1,0 +1,38 @@
+<%- include('partials/header') %>
+
+  <section class="formacao">
+    <h2>Minha jornada acadêmica</h2>
+    <p class="muted" style="margin-bottom:2rem;">
+      Desde o ensino técnico até o ensino superior, venho construindo uma base sólida em tecnologia e desenvolvimento de
+      sistemas.
+    </p>
+
+    <div class="timeline">
+      <% perfil.formacao.forEach(f=> { %>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content" data-inst="<%= f.instituicao.includes('FATEC') ? 'fatec' : 'comercio' %>">
+            <h3>
+              <%= f.titulo %>
+            </h3>
+
+            <p>
+              <strong>
+                <a href="<%= f.link %>" target="_blank" class="inst-link">
+                  <img src="/img/<%= f.instituicao.includes('FATEC') ? 'fatec.png' : 'comercio.png' %>" class="inst-logo">
+                  <span class="inst-link-text"><%= f.instituicao %></span>
+                </a>
+              </strong>
+            </p>
+
+            <p class="muted">
+              <%= f.periodo %>
+            </p>
+          </div>
+
+        </div>
+        <% }) %>
+    </div>
+  </section>
+
+  <%- include('partials/footer') %>
